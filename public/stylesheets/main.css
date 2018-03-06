@@ -1,0 +1,25 @@
+.centered{
+    text-align: center;
+}
+
+.form-container{
+    width: 30%;
+    margin: 25px auto;
+}
+
+.thumbnail{
+    padding: 0;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+.delete-form{
+    display: inline-block;
+}
+
+#map{
+    height: 400px;
+    width: 100%;
+}

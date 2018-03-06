@@ -1,0 +1,86 @@
+body{
+    background: #000;
+}
+
+.slideshow{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1){
+    background-image: url("https://images.unsplash.com/photo-1480775292373-5175d0634811?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc4ec0608640a5a60a7e7c89d5f6adc1&auto=format&fit=crop&w=1952&q=80");
+    animation-delay: 0s;
+}
+
+.slideshow li:nth-child(2){
+    background-image: url("https://images.unsplash.com/photo-1462103686380-da2f4af3369e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1674908272da852398acb984883a6556&auto=format&fit=crop&w=1950&q=80");
+    animation-delay: 20s;
+}
+
+.slideshow li:nth-child(3){
+    background-image: url("https://images.unsplash.com/photo-1470165436482-d58cbc7eb8ea?ixlib=rb-0.3.5&s=e5279276d1bbf8c90204d28e5c2d12a0&auto=format&fit=crop&w=1952&q=80");
+    animation-delay: 30s;
+}
+
+.slideshow li:nth-child(4){
+    background-image: url("https://images.unsplash.com/photo-1480044965905-02098d419e96?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1e052094fe005d1b78c08d979f88d160&auto=format&fit=crop&w=1950&q=80");
+    animation-delay: 40s;
+}
+
+.slideshow li:nth-child(5){
+    background-image: url("https://images.unsplash.com/photo-1465247609274-27281ea86149?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5119b2785b5a58e49644a3d062db56f0&auto=format&fit=crop&w=1950&q=80");
+    animation-delay: 50s;
+}
+
+@keyframes imageAnimation{
+    0%{
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10%{
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+}
+
+#landing-header{
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+
+#landing-header h1{
+    color: #fff;
+}
+
+.no-cssanimations .slideshow li{
+    opacity: 1;
+}

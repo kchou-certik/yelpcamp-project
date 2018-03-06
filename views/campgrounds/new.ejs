@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+<div class="row">
+    <h1 style="text-align: center;">Create a New Campground!</h1>
+    <div style="width: 30%; margin: 30px auto;">
+        <form action="/campgrounds" method="POST">
+            <div class="form-group">
+                <label for="name-input">Name</label>
+                <input id="name-input" class="form-control" type="text" name="name" placeholder="e.g. Onion Lake">
+            </div>
+            <div class="form-group">
+                <label for="price-input">Price</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input id="price-input" class="form-control" type="number" name="price" placeholder="e.g. 2.00" min="0.01" step="0.01"> 
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="location-input">Location</label>
+                <input id="location-input" class="form-control" type="text" name="location" placeholder="e.g. Onion Lake, PA">
+            </div>
+            <div class="form-group">
+                <label for="image-input">Image URL</label>
+                <input id="image-input" class="form-control" type="text" name="image" placeholder="e.g. https://images.unsplash.com/photo-1503097325940-ae094fdb97ba?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8904a9fc19d9bee7ab7d111a3ffcddc7&auto=format&fit=crop&w=942&q=80">
+            </div>
+            <div class="form-group">
+                <label for="description-input">Description</label>
+                <textarea id="description-input" class="form-control" name="description" rows="5" placeholder="e.g. I love this place"></textarea>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+            </div>
+        </form>
+        <a href="/campgrounds">Back</a>
+    </div>
+</div>
+<% include ../partials/footer %>
