@@ -23,8 +23,8 @@ var Campground          = require("./models/campground"),
 
 //initial setup
 require("dotenv").config();
-// mongoose.connect("mongodb://localhost/yelpcamp");
-mongoose.connect("mongodb://kchou94:yelpcamppudding@ds261838.mlab.com:61838/yelpcamp-kchou94");
+mongoose.connect(process.env.DB_URL);
+// mongoose.connect("mongodb://kchou94:yelpcamppudding@ds261838.mlab.com:61838/yelpcamp-kchou94");
 app.set("view engine", "ejs");
 app.locals.moment = require("moment");
 
